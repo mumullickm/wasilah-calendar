@@ -33,9 +33,24 @@ h2 { font-family:'Fraunces',serif; font-style:italic; color:#F1D592;
 .cap { white-space:pre-wrap; font-family:inherit; font-size:13.5px;
   line-height:1.55; opacity:.88; padding:10px 14px 16px; }
 footer { text-align:center; opacity:.55; padding:30px; font-size:13px; }
-.whenrow { padding:8px 14px 0; }
+.whenrow { padding:8px 14px 0; display:flex; gap:8px; flex-wrap:wrap;
+  align-items:center; }
 .when { display:inline-block; background:rgba(241,213,146,.1); color:#F1D592;
   font-size:12.5px; padding:4px 10px; border-radius:10px; }
+.st { display:inline-block; font-size:12px; font-weight:700;
+  padding:4px 10px; border-radius:10px; letter-spacing:.04em;
+  background:rgba(245,190,80,.18); color:#F5BE50;
+  border:1px solid rgba(245,190,80,.5); }
+.st.green { background:rgba(57,179,126,.18); color:#4ED99A;
+  border-color:rgba(57,179,126,.6); }
+.st.red { background:rgba(240,90,100,.16); color:#F58A93;
+  border-color:rgba(240,90,100,.55); }
+.counts { display:flex; gap:10px; justify-content:center; margin-top:14px;
+  flex-wrap:wrap; }
+.counts span { font-size:13px; padding:5px 12px; border-radius:12px; }
+.counts .cg { background:rgba(57,179,126,.18); color:#4ED99A; }
+.counts .cy { background:rgba(245,190,80,.18); color:#F5BE50; }
+.counts .cr { background:rgba(240,90,100,.16); color:#F58A93; }
 .post { background:none; border:1px solid rgba(241,213,146,.5); color:#F1D592;
   border-radius:10px; padding:6px 10px; cursor:pointer; font-family:inherit;
   font-size:12px; }
@@ -52,7 +67,10 @@ td a { color:#F1D592; }
 <header><h1>Wasilah · Content Studio</h1>
 <p>60 statics + 20 bilingual reels · 4:5 · 30-day run starts Mon 6 Jul 2026.
 Slots (Dhaka): AM static 07:30 · reel 21:00 · PM static 22:00.
-Copy caption, post in Meta Business Suite, then tap "Posted?" to mark green.</p></header>
+Copy caption, post in Meta Business Suite, then tap "Posted?" to mark green.</p>
+<div class="counts"><span class="cg" id="c-green">0 posted</span>
+<span class="cy" id="c-yellow">0 scheduled</span>
+<span class="cr" id="c-red">0 due</span></div></header>
 <h2>Schedule · 30 days</h2><div class="tblwrap"><table><tr><th></th><th>Date</th><th>AM static (BD)</th><th>Reel (BD)</th><th>PM static (BD)</th></tr><tr><td>Day 01</td><td>Mon 06 Jul</td><td><a href="#s01" onclick="jump('s01')">s01</a> · 07:30</td><td><a href="#v01" onclick="jump('v01')">v01</a> · 21:00</td><td><a href="#s35" onclick="jump('s35')">s35</a> · 22:00</td></tr><tr><td>Day 02</td><td>Tue 07 Jul</td><td><a href="#s15" onclick="jump('s15')">s15</a> · 07:30</td><td><a href="#v02" onclick="jump('v02')">v02</a> · 21:00</td><td><a href="#s25" onclick="jump('s25')">s25</a> · 22:00</td></tr><tr><td>Day 03</td><td>Wed 08 Jul</td><td><a href="#s51" onclick="jump('s51')">s51</a> · 07:30</td><td>-</td><td><a href="#s36" onclick="jump('s36')">s36</a> · 22:00</td></tr><tr><td>Day 04</td><td>Thu 09 Jul</td><td><a href="#s02" onclick="jump('s02')">s02</a> · 07:30</td><td><a href="#v03" onclick="jump('v03')">v03</a> · 21:00</td><td><a href="#s49" onclick="jump('s49')">s49</a> · 22:00</td></tr><tr><td>Day 05</td><td>Fri 10 Jul 🕌</td><td><a href="#s55" onclick="jump('s55')">s55</a> · 07:30</td><td><a href="#v06" onclick="jump('v06')">v06</a> · 21:00</td><td><a href="#s26" onclick="jump('s26')">s26</a> · 22:00</td></tr><tr><td>Day 06</td><td>Sat 11 Jul</td><td><a href="#s16" onclick="jump('s16')">s16</a> · 07:30</td><td>-</td><td><a href="#s52" onclick="jump('s52')">s52</a> · 22:00</td></tr><tr><td>Day 07</td><td>Sun 12 Jul</td><td><a href="#s50" onclick="jump('s50')">s50</a> · 07:30</td><td><a href="#v04" onclick="jump('v04')">v04</a> · 21:00</td><td><a href="#s37" onclick="jump('s37')">s37</a> · 22:00</td></tr><tr><td>Day 08</td><td>Mon 13 Jul</td><td><a href="#s03" onclick="jump('s03')">s03</a> · 07:30</td><td><a href="#v05" onclick="jump('v05')">v05</a> · 21:00</td><td><a href="#s27" onclick="jump('s27')">s27</a> · 22:00</td></tr><tr><td>Day 09</td><td>Tue 14 Jul</td><td><a href="#s17" onclick="jump('s17')">s17</a> · 07:30</td><td>-</td><td><a href="#s53" onclick="jump('s53')">s53</a> · 22:00</td></tr><tr><td>Day 10</td><td>Wed 15 Jul</td><td><a href="#s04" onclick="jump('s04')">s04</a> · 07:30</td><td><a href="#v07" onclick="jump('v07')">v07</a> · 21:00</td><td><a href="#s38" onclick="jump('s38')">s38</a> · 22:00</td></tr><tr><td>Day 11</td><td>Thu 16 Jul</td><td><a href="#s18" onclick="jump('s18')">s18</a> · 07:30</td><td><a href="#v08" onclick="jump('v08')">v08</a> · 21:00</td><td><a href="#s28" onclick="jump('s28')">s28</a> · 22:00</td></tr><tr><td>Day 12</td><td>Fri 17 Jul 🕌</td><td><a href="#s56" onclick="jump('s56')">s56</a> · 07:30</td><td>-</td><td><a href="#s54" onclick="jump('s54')">s54</a> · 22:00</td></tr><tr><td>Day 13</td><td>Sat 18 Jul</td><td><a href="#s05" onclick="jump('s05')">s05</a> · 07:30</td><td><a href="#v09" onclick="jump('v09')">v09</a> · 21:00</td><td><a href="#s39" onclick="jump('s39')">s39</a> · 22:00</td></tr><tr><td>Day 14</td><td>Sun 19 Jul</td><td><a href="#s19" onclick="jump('s19')">s19</a> · 07:30</td><td><a href="#v10" onclick="jump('v10')">v10</a> · 21:00</td><td><a href="#s29" onclick="jump('s29')">s29</a> · 22:00</td></tr><tr><td>Day 15</td><td>Mon 20 Jul</td><td><a href="#s06" onclick="jump('s06')">s06</a> · 07:30</td><td>-</td><td><a href="#s40" onclick="jump('s40')">s40</a> · 22:00</td></tr><tr><td>Day 16</td><td>Tue 21 Jul</td><td><a href="#s20" onclick="jump('s20')">s20</a> · 07:30</td><td><a href="#v11" onclick="jump('v11')">v11</a> · 21:00</td><td><a href="#s30" onclick="jump('s30')">s30</a> · 22:00</td></tr><tr><td>Day 17</td><td>Wed 22 Jul</td><td><a href="#s07" onclick="jump('s07')">s07</a> · 07:30</td><td><a href="#v12" onclick="jump('v12')">v12</a> · 21:00</td><td><a href="#s41" onclick="jump('s41')">s41</a> · 22:00</td></tr><tr><td>Day 18</td><td>Thu 23 Jul</td><td><a href="#s21" onclick="jump('s21')">s21</a> · 07:30</td><td>-</td><td><a href="#s31" onclick="jump('s31')">s31</a> · 22:00</td></tr><tr><td>Day 19</td><td>Fri 24 Jul 🕌</td><td><a href="#s57" onclick="jump('s57')">s57</a> · 07:30</td><td><a href="#v13" onclick="jump('v13')">v13</a> · 21:00</td><td><a href="#s58" onclick="jump('s58')">s58</a> · 22:00</td></tr><tr><td>Day 20</td><td>Sat 25 Jul</td><td><a href="#s08" onclick="jump('s08')">s08</a> · 07:30</td><td><a href="#v14" onclick="jump('v14')">v14</a> · 21:00</td><td><a href="#s42" onclick="jump('s42')">s42</a> · 22:00</td></tr><tr><td>Day 21</td><td>Sun 26 Jul</td><td><a href="#s22" onclick="jump('s22')">s22</a> · 07:30</td><td>-</td><td><a href="#s32" onclick="jump('s32')">s32</a> · 22:00</td></tr><tr><td>Day 22</td><td>Mon 27 Jul</td><td><a href="#s09" onclick="jump('s09')">s09</a> · 07:30</td><td><a href="#v15" onclick="jump('v15')">v15</a> · 21:00</td><td><a href="#s43" onclick="jump('s43')">s43</a> · 22:00</td></tr><tr><td>Day 23</td><td>Tue 28 Jul</td><td><a href="#s23" onclick="jump('s23')">s23</a> · 07:30</td><td><a href="#v16" onclick="jump('v16')">v16</a> · 21:00</td><td><a href="#s33" onclick="jump('s33')">s33</a> · 22:00</td></tr><tr><td>Day 24</td><td>Wed 29 Jul</td><td><a href="#s10" onclick="jump('s10')">s10</a> · 07:30</td><td>-</td><td><a href="#s44" onclick="jump('s44')">s44</a> · 22:00</td></tr><tr><td>Day 25</td><td>Thu 30 Jul</td><td><a href="#s24" onclick="jump('s24')">s24</a> · 07:30</td><td><a href="#v17" onclick="jump('v17')">v17</a> · 21:00</td><td><a href="#s34" onclick="jump('s34')">s34</a> · 22:00</td></tr><tr><td>Day 26</td><td>Fri 31 Jul 🕌</td><td><a href="#s59" onclick="jump('s59')">s59</a> · 07:30</td><td><a href="#v18" onclick="jump('v18')">v18</a> · 21:00</td><td><a href="#s60" onclick="jump('s60')">s60</a> · 22:00</td></tr><tr><td>Day 27</td><td>Sat 01 Aug</td><td><a href="#s11" onclick="jump('s11')">s11</a> · 07:30</td><td>-</td><td><a href="#s45" onclick="jump('s45')">s45</a> · 22:00</td></tr><tr><td>Day 28</td><td>Sun 02 Aug</td><td><a href="#s12" onclick="jump('s12')">s12</a> · 07:30</td><td><a href="#v19" onclick="jump('v19')">v19</a> · 21:00</td><td><a href="#s46" onclick="jump('s46')">s46</a> · 22:00</td></tr><tr><td>Day 29</td><td>Mon 03 Aug</td><td><a href="#s13" onclick="jump('s13')">s13</a> · 07:30</td><td><a href="#v20" onclick="jump('v20')">v20</a> · 21:00</td><td><a href="#s47" onclick="jump('s47')">s47</a> · 22:00</td></tr><tr><td>Day 30</td><td>Tue 04 Aug</td><td><a href="#s14" onclick="jump('s14')">s14</a> · 07:30</td><td>-</td><td><a href="#s48" onclick="jump('s48')">s48</a> · 22:00</td></tr></table></div>
 <h2>Statics · 60</h2>
 <div class="bar"><button class="f" onclick="flt('ALL')">ALL</button><button class="f" onclick="flt('AYAH')">AYAH</button><button class="f" onclick="flt('HADITH')">HADITH</button><button class="f" onclick="flt('DUA')">DUA</button><button class="f" onclick="flt('REFLECT')">REFLECT</button><button class="f" onclick="flt('SALAH')">SALAH</button><button class="f" onclick="flt('JUMUAH')">JUMUAH</button></div>
@@ -62,7 +80,7 @@ Copy caption, post in Meta Business Suite, then tap "Posted?" to mark green.</p>
 <span class="id">s01</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 06 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-06T07:30:00+06:00">Scheduled</span> <span class="when">Mon 06 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Establish prayer for My remembrance.
 আমার স্মরণে সালাত কায়েম করো।
 (Surah Ta-Ha · 20:14)
@@ -76,7 +94,7 @@ https://wasilah.site/get/
 <span class="id">s02</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 09 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-09T07:30:00+06:00">Scheduled</span> <span class="when">Thu 09 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Remember Me, and I will remember you.
 তোমরা আমাকে স্মরণ করো, আমিও তোমাদের স্মরণ করবো।
 (Surah Al-Baqarah · 2:152)
@@ -90,7 +108,7 @@ https://wasilah.site/get/
 <span class="id">s03</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 13 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-13T07:30:00+06:00">Scheduled</span> <span class="when">Mon 13 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Truly, in the remembrance of Allah do hearts find rest.
 জেনে রাখো, আল্লাহর স্মরণেই অন্তর প্রশান্তি পায়।
 (Surah Ar-Ra&#x27;d · 13:28)
@@ -104,7 +122,7 @@ https://wasilah.site/get/
 <span class="id">s04</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 15 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-15T07:30:00+06:00">Scheduled</span> <span class="when">Wed 15 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Indeed, with hardship comes ease.
 নিশ্চয়ই কষ্টের সাথেই আছে স্বস্তি।
 (Surah Ash-Sharh · 94:6)
@@ -118,7 +136,7 @@ https://wasilah.site/get/
 <span class="id">s05</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 18 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-18T07:30:00+06:00">Scheduled</span> <span class="when">Sat 18 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Seek help through patience and prayer.
 ধৈর্য ও সালাতের মাধ্যমে সাহায্য চাও।
 (Surah Al-Baqarah · 2:45)
@@ -132,7 +150,7 @@ https://wasilah.site/get/
 <span class="id">s06</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 20 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-20T07:30:00+06:00">Scheduled</span> <span class="when">Mon 20 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Prayer restrains from shameful and evil deeds.
 নিশ্চয়ই সালাত অশ্লীল ও মন্দ কাজ থেকে বিরত রাখে।
 (Surah Al-Ankabut · 29:45)
@@ -146,7 +164,7 @@ https://wasilah.site/get/
 <span class="id">s07</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 22 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-22T07:30:00+06:00">Scheduled</span> <span class="when">Wed 22 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">And He is with you wherever you are.
 তোমরা যেখানেই থাকো, তিনি তোমাদের সাথেই আছেন।
 (Surah Al-Hadid · 57:4)
@@ -160,7 +178,7 @@ https://wasilah.site/get/
 <span class="id">s08</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 25 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-25T07:30:00+06:00">Scheduled</span> <span class="when">Sat 25 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Indeed, Allah is with the patient.
 নিশ্চয়ই আল্লাহ ধৈর্যশীলদের সাথে আছেন।
 (Surah Al-Baqarah · 2:153)
@@ -174,7 +192,7 @@ https://wasilah.site/get/
 <span class="id">s09</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 27 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-27T07:30:00+06:00">Scheduled</span> <span class="when">Mon 27 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Do not despair of the mercy of Allah.
 আল্লাহর রহমত থেকে নিরাশ হয়ো না।
 (Surah Az-Zumar · 39:53)
@@ -188,7 +206,7 @@ https://wasilah.site/get/
 <span class="id">s10</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 29 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-29T07:30:00+06:00">Scheduled</span> <span class="when">Wed 29 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Indeed, I am near.
 নিশ্চয়ই আমি নিকটে।
 (Surah Al-Baqarah · 2:186)
@@ -202,7 +220,7 @@ https://wasilah.site/get/
 <span class="id">s11</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 01 Aug · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-01T07:30:00+06:00">Scheduled</span> <span class="when">Sat 01 Aug · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Allah is sufficient for us, and He is the best Guardian.
 আল্লাহই আমাদের জন্য যথেষ্ট, তিনিই উত্তম অভিভাবক।
 (Surah Aal-Imran · 3:173)
@@ -216,7 +234,7 @@ https://wasilah.site/get/
 <span class="id">s12</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 02 Aug · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-02T07:30:00+06:00">Scheduled</span> <span class="when">Sun 02 Aug · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Whoever relies on Allah, He is enough for him.
 যে আল্লাহর উপর ভরসা করে, তিনিই তার জন্য যথেষ্ট।
 (Surah At-Talaq · 65:3)
@@ -230,7 +248,7 @@ https://wasilah.site/get/
 <span class="id">s13</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 03 Aug · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-03T07:30:00+06:00">Scheduled</span> <span class="when">Mon 03 Aug · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">My Lord, increase me in knowledge.
 হে আমার রব, আমার জ্ঞান বাড়িয়ে দিন।
 (Surah Ta-Ha · 20:114)
@@ -244,7 +262,7 @@ https://wasilah.site/get/
 <span class="id">s14</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 04 Aug · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-04T07:30:00+06:00">Scheduled</span> <span class="when">Tue 04 Aug · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Establish prayer from the decline of the sun.
 সূর্য ঢলে পড়ার সময় থেকে সালাত কায়েম করো।
 (Surah Al-Isra · 17:78)
@@ -258,7 +276,7 @@ https://wasilah.site/get/
 <span class="id">s15</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 07 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-07T07:30:00+06:00">Scheduled</span> <span class="when">Tue 07 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">The most beloved deeds to Allah are the most consistent, even if small.
 আল্লাহর কাছে সবচেয়ে প্রিয় আমল নিয়মিত আমল, তা অল্প হলেও।
 (Bukhari &amp; Muslim)
@@ -272,7 +290,7 @@ https://wasilah.site/get/
 <span class="id">s16</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 11 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-11T07:30:00+06:00">Scheduled</span> <span class="when">Sat 11 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">The coolness of my eyes was placed in prayer.
 আমার চোখের শীতলতা রাখা হয়েছে সালাতে।
 (Sunan an-Nasa&#x27;i)
@@ -286,7 +304,7 @@ https://wasilah.site/get/
 <span class="id">s17</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 14 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-14T07:30:00+06:00">Scheduled</span> <span class="when">Tue 14 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Purity is half of faith.
 পবিত্রতা ঈমানের অর্ধেক।
 (Sahih Muslim)
@@ -300,7 +318,7 @@ https://wasilah.site/get/
 <span class="id">s18</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 16 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-16T07:30:00+06:00">Scheduled</span> <span class="when">Thu 16 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Your smile for your brother is charity.
 তোমার ভাইয়ের দিকে তোমার হাসিও একটি সদকা।
 (Jami&#x27; at-Tirmidhi)
@@ -314,7 +332,7 @@ https://wasilah.site/get/
 <span class="id">s19</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 19 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-19T07:30:00+06:00">Scheduled</span> <span class="when">Sun 19 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">The best of you are those who learn the Qur&#x27;an and teach it.
 তোমাদের মধ্যে সেই শ্রেষ্ঠ, যে কুরআন শেখে ও শেখায়।
 (Sahih al-Bukhari)
@@ -328,7 +346,7 @@ https://wasilah.site/get/
 <span class="id">s20</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 21 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-21T07:30:00+06:00">Scheduled</span> <span class="when">Tue 21 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Make things easy, and do not make them hard.
 সহজ করো, কঠিন করো না।
 (Sahih al-Bukhari)
@@ -342,7 +360,7 @@ https://wasilah.site/get/
 <span class="id">s21</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 23 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-23T07:30:00+06:00">Scheduled</span> <span class="when">Thu 23 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Allah does not look at your appearance or wealth, but at your hearts and deeds.
 আল্লাহ তোমাদের চেহারা বা সম্পদ দেখেন না, দেখেন তোমাদের অন্তর ও আমল।
 (Sahih Muslim)
@@ -356,7 +374,7 @@ https://wasilah.site/get/
 <span class="id">s22</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 26 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-26T07:30:00+06:00">Scheduled</span> <span class="when">Sun 26 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Whoever prays Fajr is under the protection of Allah.
 যে ফজর পড়ে, সে আল্লাহর জিম্মায় থাকে।
 (Sahih Muslim)
@@ -370,7 +388,7 @@ https://wasilah.site/get/
 <span class="id">s23</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 28 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-28T07:30:00+06:00">Scheduled</span> <span class="when">Tue 28 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Supplication is the essence of worship.
 দোয়াই ইবাদত।
 (Tirmidhi &amp; Abu Dawud)
@@ -384,7 +402,7 @@ https://wasilah.site/get/
 <span class="id">s24</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 30 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-30T07:30:00+06:00">Scheduled</span> <span class="when">Thu 30 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">The first matter a servant will be questioned about on the Day of Judgment is the prayer.
 কিয়ামতের দিন বান্দার কাছ থেকে সর্বপ্রথম হিসাব নেওয়া হবে সালাতের।
 (Jami&#x27; at-Tirmidhi)
@@ -398,7 +416,7 @@ https://wasilah.site/get/
 <span class="id">s25</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 07 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-07T22:00:00+06:00">Scheduled</span> <span class="when">Tue 07 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Our Lord, give us good in this world and good in the Hereafter, and protect us from the Fire.
 হে আমাদের রব, আমাদের দুনিয়াতে কল্যাণ দিন, আখিরাতেও কল্যাণ দিন, আর আগুনের আজাব থেকে রক্ষা করুন।
 (Surah Al-Baqarah · 2:201)
@@ -412,7 +430,7 @@ https://wasilah.site/get/
 <span class="id">s26</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 10 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-10T22:00:00+06:00">Scheduled</span> <span class="when">Fri 10 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">My Lord, make me steadfast in prayer, and my descendants too.
 হে আমার রব, আমাকে ও আমার বংশধরদের সালাত কায়েমকারী করুন।
 (Surah Ibrahim · 14:40)
@@ -426,7 +444,7 @@ https://wasilah.site/get/
 <span class="id">s27</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 13 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-13T22:00:00+06:00">Scheduled</span> <span class="when">Mon 13 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">My Lord, expand my chest and ease my task for me.
 হে আমার রব, আমার বুক প্রশস্ত করে দিন, আমার কাজ সহজ করে দিন।
 (Surah Ta-Ha · 20:25-26)
@@ -440,7 +458,7 @@ https://wasilah.site/get/
 <span class="id">s28</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 16 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-16T22:00:00+06:00">Scheduled</span> <span class="when">Thu 16 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Our Lord, let not our hearts deviate after You have guided us.
 হে আমাদের রব, হেদায়েত দেওয়ার পর আমাদের অন্তরকে বাঁকা করে দেবেন না।
 (Surah Aal-Imran · 3:8)
@@ -454,7 +472,7 @@ https://wasilah.site/get/
 <span class="id">s29</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 19 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-19T22:00:00+06:00">Scheduled</span> <span class="when">Sun 19 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">O Allah, help me remember You, thank You, and worship You beautifully.
 হে আল্লাহ, আপনার জিকির, শোকর ও সুন্দর ইবাদতে আমাকে সাহায্য করুন।
 (Sunan Abu Dawud)
@@ -468,7 +486,7 @@ https://wasilah.site/get/
 <span class="id">s30</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 21 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-21T22:00:00+06:00">Scheduled</span> <span class="when">Tue 21 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">My Lord, I am in need of whatever good You send down to me.
 হে আমার রব, আপনি আমার প্রতি যে কল্যাণই পাঠান, আমি তার মুখাপেক্ষী।
 (Surah Al-Qasas · 28:24)
@@ -482,7 +500,7 @@ https://wasilah.site/get/
 <span class="id">s31</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 23 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-23T22:00:00+06:00">Scheduled</span> <span class="when">Thu 23 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Allah is sufficient for me; there is no god but Him; in Him I put my trust.
 আল্লাহই আমার জন্য যথেষ্ট, তিনি ছাড়া কোনো উপাস্য নেই, তাঁর উপরই ভরসা করি।
 (Surah At-Tawbah · 9:129)
@@ -496,7 +514,7 @@ https://wasilah.site/get/
 <span class="id">s32</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 26 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-26T22:00:00+06:00">Scheduled</span> <span class="when">Sun 26 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Our Lord, grant us from our spouses and children the coolness of our eyes.
 হে আমাদের রব, আমাদের জীবনসঙ্গী ও সন্তানদের করুন আমাদের চোখের শীতলতা।
 (Surah Al-Furqan · 25:74)
@@ -510,7 +528,7 @@ https://wasilah.site/get/
 <span class="id">s33</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 28 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-28T22:00:00+06:00">Scheduled</span> <span class="when">Tue 28 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">O Allah, You are Pardoning and You love pardon, so pardon me.
 হে আল্লাহ, আপনি ক্ষমাশীল, ক্ষমা ভালোবাসেন, তাই আমাকে ক্ষমা করুন।
 (Jami&#x27; at-Tirmidhi)
@@ -524,7 +542,7 @@ https://wasilah.site/get/
 <span class="id">s34</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 30 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-30T22:00:00+06:00">Scheduled</span> <span class="when">Thu 30 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">O Turner of hearts, keep my heart firm upon Your religion.
 হে অন্তরসমূহের পরিবর্তনকারী, আমার অন্তরকে আপনার দ্বীনে অবিচল রাখুন।
 (Jami&#x27; at-Tirmidhi)
@@ -538,7 +556,7 @@ https://wasilah.site/get/
 <span class="id">s35</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 06 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-06T22:00:00+06:00">Scheduled</span> <span class="when">Mon 06 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Five times a day, the world pauses.
 দিনে পাঁচবার, পৃথিবী থেমে যায়।
 
@@ -551,7 +569,7 @@ https://wasilah.site/get/
 <span class="id">s36</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 08 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-08T22:00:00+06:00">Scheduled</span> <span class="when">Wed 08 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Salah is not an interruption. Everything else moves around it.
 সালাত ব্যাঘাত নয়। বরং সবকিছু সাজে এই সাক্ষাৎকে ঘিরেই।
 
@@ -564,7 +582,7 @@ https://wasilah.site/get/
 <span class="id">s37</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 12 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-12T22:00:00+06:00">Scheduled</span> <span class="when">Sun 12 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">The adhan is not calling you away. It is calling you back.
 আজান আপনাকে দূরে ডাকে না, ডাকে ফিরে আসতে।
 
@@ -577,7 +595,7 @@ https://wasilah.site/get/
 <span class="id">s38</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 15 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-15T22:00:00+06:00">Scheduled</span> <span class="when">Wed 15 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Wudu washes more than the skin.
 ওজু শুধু শরীর ধোয় না, ধোয় আরও গভীরে।
 
@@ -590,7 +608,7 @@ https://wasilah.site/get/
 <span class="id">s39</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 18 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-18T22:00:00+06:00">Scheduled</span> <span class="when">Sat 18 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Sujood: the lowest position, the highest honor.
 সিজদা: সবচেয়ে নিচু ভঙ্গি, সবচেয়ে উঁচু সম্মান।
 
@@ -603,7 +621,7 @@ https://wasilah.site/get/
 <span class="id">s40</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 20 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-20T22:00:00+06:00">Scheduled</span> <span class="when">Mon 20 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Your prayer mat is one square meter of peace.
 আপনার জায়নামাজ এক টুকরো প্রশান্তির জমিন।
 
@@ -616,7 +634,7 @@ https://wasilah.site/get/
 <span class="id">s41</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 22 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-22T22:00:00+06:00">Scheduled</span> <span class="when">Wed 22 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Between Maghrib and Isha, the day exhales.
 মাগরিব থেকে এশা, দিন যেন ধীরে নিঃশ্বাস ছাড়ে।
 
@@ -629,7 +647,7 @@ https://wasilah.site/get/
 <span class="id">s42</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 25 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-25T22:00:00+06:00">Scheduled</span> <span class="when">Sat 25 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Dhikr is the heart&#x27;s heartbeat.
 জিকির অন্তরের স্পন্দন।
 
@@ -642,7 +660,7 @@ https://wasilah.site/get/
 <span class="id">s43</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 27 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-27T22:00:00+06:00">Scheduled</span> <span class="when">Mon 27 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">You don&#x27;t find time for prayer. You build the day around it.
 সালাতের জন্য সময় খুঁজতে হয় না, দিনটাই সাজাতে হয় সালাতকে ঘিরে।
 
@@ -655,7 +673,7 @@ https://wasilah.site/get/
 <span class="id">s44</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 29 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-29T22:00:00+06:00">Scheduled</span> <span class="when">Wed 29 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">The Qur&#x27;an was sent to be lived, one verse at a time.
 কুরআন এসেছে জীবনে বাস্তবায়নের জন্য, এক আয়াত করে করে।
 
@@ -668,7 +686,7 @@ https://wasilah.site/get/
 <span class="id">s45</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 01 Aug · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-01T22:00:00+06:00">Scheduled</span> <span class="when">Sat 01 Aug · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Patience is not waiting. It is how you carry the wait.
 সবর মানে শুধু অপেক্ষা নয়, অপেক্ষাকে বহন করার ধরন।
 
@@ -681,7 +699,7 @@ https://wasilah.site/get/
 <span class="id">s46</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 02 Aug · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-02T22:00:00+06:00">Scheduled</span> <span class="when">Sun 02 Aug · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Gratitude turns what you have into enough.
 শোকর যা আছে তাকেই যথেষ্ট করে তোলে।
 
@@ -694,7 +712,7 @@ https://wasilah.site/get/
 <span class="id">s47</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 03 Aug · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-03T22:00:00+06:00">Scheduled</span> <span class="when">Mon 03 Aug · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Tawakkul: do your part, then rest your heart.
 তাওয়াক্কুল: নিজের কাজটুকু করুন, তারপর অন্তরকে দিন বিশ্রাম।
 
@@ -707,7 +725,7 @@ https://wasilah.site/get/
 <span class="id">s48</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 04 Aug · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-04T22:00:00+06:00">Scheduled</span> <span class="when">Tue 04 Aug · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">While the city sleeps, some hearts are wide awake.
 শহর যখন ঘুমায়, কিছু অন্তর তখন জেগে।
 
@@ -720,7 +738,7 @@ https://wasilah.site/get/
 <span class="id">s49</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 09 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-09T22:00:00+06:00">Scheduled</span> <span class="when">Thu 09 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Khushu starts before the takbir. Slow down your wudu.
 খুশু শুরু হয় তাকবিরের আগেই। ওজুতে একটু ধীর হোন।
 
@@ -733,7 +751,7 @@ https://wasilah.site/get/
 <span class="id">s50</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 12 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-12T07:30:00+06:00">Scheduled</span> <span class="when">Sun 12 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Prayer at its time: the deed Allah loves most.
 সময়মতো সালাত: আল্লাহর সবচেয়ে প্রিয় আমল।
 (Sahih al-Bukhari)
@@ -747,7 +765,7 @@ https://wasilah.site/get/
 <span class="id">s51</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 08 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-08T07:30:00+06:00">Scheduled</span> <span class="when">Wed 08 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">The two rak&#x27;ahs before Fajr are better than the world and all it contains.
 ফজরের আগের দুই রাকাত দুনিয়া ও তার সবকিছুর চেয়ে উত্তম।
 (Sahih Muslim)
@@ -761,7 +779,7 @@ https://wasilah.site/get/
 <span class="id">s52</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 11 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-11T22:00:00+06:00">Scheduled</span> <span class="when">Sat 11 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Travelling? The Qibla travels with you.
 সফরে আছেন? কিবলা আপনার সাথেই চলে।
 
@@ -774,7 +792,7 @@ https://wasilah.site/get/
 <span class="id">s53</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 14 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-14T22:00:00+06:00">Scheduled</span> <span class="when">Tue 14 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">After salah: SubhanAllah 33, Alhamdulillah 33, Allahu Akbar 34.
 সালাতের পর: সুবহানাল্লাহ ৩৩, আলহামদুলিল্লাহ ৩৩, আল্লাহু আকবার ৩৪।
 (Sahih Muslim)
@@ -788,7 +806,7 @@ https://wasilah.site/get/
 <span class="id">s54</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 17 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-17T22:00:00+06:00">Scheduled</span> <span class="when">Fri 17 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Pray as if it is your last prayer. One day it will be true.
 এমনভাবে সালাত পড়ুন, যেন এটিই শেষ সালাত। একদিন তা সত্যিই হবে।
 
@@ -801,7 +819,7 @@ https://wasilah.site/get/
 <span class="id">s55</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 10 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-10T07:30:00+06:00">Scheduled</span> <span class="when">Fri 10 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Jumu&#x27;ah: the week&#x27;s heartbeat.
 জুম&#x27;আ: সপ্তাহের হৃদস্পন্দন।
 
@@ -814,7 +832,7 @@ https://wasilah.site/get/
 <span class="id">s56</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 17 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-17T07:30:00+06:00">Scheduled</span> <span class="when">Fri 17 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">The best day the sun rises upon is Friday.
 সূর্য ওঠা দিনগুলোর মধ্যে শ্রেষ্ঠ দিন জুম&#x27;আ।
 (Sahih Muslim)
@@ -828,7 +846,7 @@ https://wasilah.site/get/
 <span class="id">s57</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 24 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-24T07:30:00+06:00">Scheduled</span> <span class="when">Fri 24 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">Send salawat abundantly on Friday.
 শুক্রবারে বেশি বেশি দরুদ পড়ুন।
 (Sunan Abu Dawud)
@@ -842,7 +860,7 @@ https://wasilah.site/get/
 <span class="id">s58</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 24 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-24T22:00:00+06:00">Scheduled</span> <span class="when">Fri 24 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Surah Al-Kahf on Friday: a light between two Fridays.
 শুক্রবারে সূরা কাহফ: দুই জুম&#x27;আর মাঝে এক আলো।
 (Al-Hakim &amp; Bayhaqi)
@@ -856,7 +874,7 @@ https://wasilah.site/get/
 <span class="id">s59</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 31 Jul · 07:30 BD · 04:30 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-31T07:30:00+06:00">Scheduled</span> <span class="when">Fri 31 Jul · 07:30 BD · 04:30 Gulf</span></div>
 <pre class="cap">There is an hour on Friday when du&#x27;a is not refused.
 জুম&#x27;আর দিনে এমন একটি মুহূর্ত আছে, যখন দোয়া ফেরত দেওয়া হয় না।
 (Bukhari &amp; Muslim)
@@ -870,7 +888,7 @@ https://wasilah.site/get/
 <span class="id">s60</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 31 Jul · 22:00 BD · 19:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-31T22:00:00+06:00">Scheduled</span> <span class="when">Fri 31 Jul · 22:00 BD · 19:00 Gulf</span></div>
 <pre class="cap">Ghusl, best clothes, early steps: the sunnah of Jumu&#x27;ah.
 গোসল, উত্তম পোশাক, আগে আগমন: জুম&#x27;আর সুন্নাহ।
 
@@ -885,7 +903,7 @@ https://wasilah.site/get/
 <span class="id">v01 · pauses</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 06 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-06T21:00:00+06:00">Scheduled</span> <span class="when">Mon 06 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Five times a day, the world pauses. Not a break from life... the anchor that holds it together. Come back to what centers you.
 দিনে পাঁচবার, পৃথিবী থেমে যায়। জীবন থেকে বিরতি নয়, জীবনকে ধরে রাখার অবলম্বন। ফিরে আসুন, প্রশান্তির কাছে।
 
@@ -896,7 +914,7 @@ https://wasilah.site/get/
 <span class="id">v02 · fajr</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 07 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-07T21:00:00+06:00">Scheduled</span> <span class="when">Tue 07 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Before the world wakes, someone is standing in prayer. The day you start with Fajr carries a different light. Meet the morning on the mat.
 পৃথিবী জাগার আগে, কেউ সালাতে দাঁড়িয়ে আছে। যে দিন শুরু হয় ফজর দিয়ে, সে দিনের আলোই আলাদা। সকালকে জায়নামাজে স্বাগত জানান।
 
@@ -907,7 +925,7 @@ https://wasilah.site/get/
 <span class="id">v03 · dhikr</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 09 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-09T21:00:00+06:00">Scheduled</span> <span class="when">Thu 09 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Remember Him, and He remembers you. In the noise of the day, the heart needs one quiet word. Dhikr is how the heart breathes.
 তাঁকে স্মরণ করুন, তিনিও আপনাকে স্মরণ করবেন। দিনের কোলাহলে অন্তরের দরকার একটি শান্ত শব্দ। জিকিরেই অন্তর নিঃশ্বাস নেয়।
 
@@ -918,7 +936,7 @@ https://wasilah.site/get/
 <span class="id">v04 · sabr</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 12 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-12T21:00:00+06:00">Scheduled</span> <span class="when">Sun 12 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Patience is not standing still. It is walking through the storm without letting go. And Allah is with the patient.
 সবর মানে থেমে থাকা নয়। ঝড়ের মধ্য দিয়ে হেঁটে যাওয়া, হাল না ছেড়ে। আর আল্লাহ ধৈর্যশীলদের সাথেই আছেন।
 
@@ -929,7 +947,7 @@ https://wasilah.site/get/
 <span class="id">v05 · qibla</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 13 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-13T21:00:00+06:00">Scheduled</span> <span class="when">Mon 13 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Wherever the road takes you, one direction never changes. Find the Qibla, find your bearing. Some compasses point home.
 পথ যেখানেই নিয়ে যাক, একটি দিক কখনো বদলায় না। কিবলা খুঁজে নিন, নিজের অভিমুখ খুঁজে নিন। কিছু কম্পাস ঘরের দিকেই দেখায়।
 
@@ -940,7 +958,7 @@ https://wasilah.site/get/
 <span class="id">v06 · jumuah</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 10 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-10T21:00:00+06:00">Scheduled</span> <span class="when">Fri 10 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Friday is not just the end of the week. It is the best day the sun rises upon. Arrive early. Leave lighter.
 শুক্রবার শুধু সপ্তাহের শেষ নয়। সূর্য ওঠা দিনগুলোর শ্রেষ্ঠ দিন। আগে আসুন, হালকা হয়ে ফিরুন।
 
@@ -951,7 +969,7 @@ https://wasilah.site/get/
 <span class="id">v07 · quran</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 15 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-15T21:00:00+06:00">Scheduled</span> <span class="when">Wed 15 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">One verse a day can change the way you see everything. The Qur&#x27;an was sent to be lived. Open it before the day opens you.
 দিনে একটি আয়াতও বদলে দিতে পারে আপনার দেখার চোখ। কুরআন এসেছে জীবনে বাস্তবায়নের জন্য। দিন আপনাকে ব্যস্ত করার আগে, আপনি কুরআন খুলুন।
 
@@ -962,7 +980,7 @@ https://wasilah.site/get/
 <span class="id">v08 · khushu</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 16 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-16T21:00:00+06:00">Scheduled</span> <span class="when">Thu 16 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Slow down. The prayer is not a task to finish, it is a meeting to attend. Stand like you know Who is listening.
 ধীর হোন। সালাত শেষ করার কাজ নয়, উপস্থিত থাকার এক সাক্ষাৎ। এমনভাবে দাঁড়ান, যেন জানেন কে শুনছেন।
 
@@ -973,7 +991,7 @@ https://wasilah.site/get/
 <span class="id">v09 · gratitude</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 18 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-18T21:00:00+06:00">Scheduled</span> <span class="when">Sat 18 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Count the blessings you forgot were blessings. Gratitude turns what you have into enough. Alhamdulillah is a full sentence.
 যে নিয়ামতগুলো ভুলে গেছেন, সেগুলোও গুনে দেখুন। শোকর যা আছে তাকেই যথেষ্ট করে তোলে। আলহামদুলিল্লাহ নিজেই একটি পূর্ণ বাক্য।
 
@@ -984,7 +1002,7 @@ https://wasilah.site/get/
 <span class="id">v10 · tawakkul</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 19 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-19T21:00:00+06:00">Scheduled</span> <span class="when">Sun 19 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Tie your camel, then trust. Do your part, then rest your heart. Whoever relies on Allah, He is enough for him.
 আগে উট বাঁধুন, তারপর ভরসা করুন। নিজের কাজটুকু করুন, তারপর অন্তরকে দিন বিশ্রাম। যে আল্লাহর উপর ভরসা করে, তিনিই তার জন্য যথেষ্ট।
 
@@ -995,7 +1013,7 @@ https://wasilah.site/get/
 <span class="id">v11 · dua</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 21 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-21T21:00:00+06:00">Scheduled</span> <span class="when">Tue 21 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">No appointment needed. No queue, no gatekeeper. He is near, and He answers. Raise your hands.
 কোনো অ্যাপয়েন্টমেন্ট লাগে না। নেই লাইন, নেই দারোয়ান। তিনি নিকটে, তিনি সাড়া দেন। হাত তুলুন।
 
@@ -1006,7 +1024,7 @@ https://wasilah.site/get/
 <span class="id">v12 · istighfar</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Wed 22 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-22T21:00:00+06:00">Scheduled</span> <span class="when">Wed 22 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Everyone slips. Not everyone returns. Istighfar is the door that never locks. Come back, again and again.
 ভুল সবারই হয়। কিন্তু সবাই ফেরে না। ইস্তিগফার এমন এক দরজা, যা কখনো বন্ধ হয় না। ফিরে আসুন, বারবার।
 
@@ -1017,7 +1035,7 @@ https://wasilah.site/get/
 <span class="id">v13 · consistency</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 24 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-24T21:00:00+06:00">Scheduled</span> <span class="when">Fri 24 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Small deeds, done daily, outweigh grand gestures done once. The most beloved deeds are the most consistent. Keep showing up.
 প্রতিদিনের ছোট আমল, একবারের বড় আয়োজনের চেয়ে ভারী। সবচেয়ে প্রিয় আমল নিয়মিত আমল। লেগে থাকুন।
 
@@ -1028,7 +1046,7 @@ https://wasilah.site/get/
 <span class="id">v14 · sujood</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sat 25 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-25T21:00:00+06:00">Scheduled</span> <span class="when">Sat 25 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">The closest you are to Him is when you are lowest to the ground. Sujood is not falling down. It is arriving.
 তাঁর সবচেয়ে কাছে আপনি তখনই, যখন মাটির সবচেয়ে কাছে। সিজদা পড়ে যাওয়া নয়, পৌঁছে যাওয়া।
 
@@ -1039,7 +1057,7 @@ https://wasilah.site/get/
 <span class="id">v15 · maghrib</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 27 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-27T21:00:00+06:00">Scheduled</span> <span class="when">Mon 27 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">As the sun sets, let the day&#x27;s weight set with it. Maghrib is the day&#x27;s soft landing. End the day the way it began: facing Him.
 সূর্য ডোবার সাথে দিনের ভারও নামিয়ে রাখুন। মাগরিব দিনের কোমল অবতরণ। দিন যেভাবে শুরু হয়েছিল, সেভাবেই শেষ হোক: তাঁর দিকে ফিরে।
 
@@ -1050,7 +1068,7 @@ https://wasilah.site/get/
 <span class="id">v16 · mercy</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Tue 28 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-28T21:00:00+06:00">Scheduled</span> <span class="when">Tue 28 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">His mercy outruns your mistakes. Do not despair of the mercy of Allah. The door is open. It was always open.
 আপনার ভুলের চেয়ে তাঁর রহমত এগিয়ে। আল্লাহর রহমত থেকে নিরাশ হবেন না। দরজা খোলা। বরাবরই খোলা ছিল।
 
@@ -1061,7 +1079,7 @@ https://wasilah.site/get/
 <span class="id">v17 · family</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Thu 30 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-30T21:00:00+06:00">Scheduled</span> <span class="when">Thu 30 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Teach them to love the prayer, and you have given them an anchor for life. Some inheritance is heavier than gold.
 সন্তানদের সালাত ভালোবাসতে শেখান, জীবনের জন্য এক অবলম্বন দিয়ে দিলেন। কিছু উত্তরাধিকার সোনার চেয়েও দামি।
 
@@ -1072,7 +1090,7 @@ https://wasilah.site/get/
 <span class="id">v18 · night</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Fri 31 Jul · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-07-31T21:00:00+06:00">Scheduled</span> <span class="when">Fri 31 Jul · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">While the city sleeps, some hearts are wide awake. The night prayer is a secret between you and Him. Guard it.
 শহর যখন ঘুমায়, কিছু অন্তর তখন জেগে। রাতের সালাত আপনার আর তাঁর মাঝের এক গোপন কথা। যত্নে রাখুন।
 
@@ -1083,7 +1101,7 @@ https://wasilah.site/get/
 <span class="id">v19 · adhan</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Sun 02 Aug · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-02T21:00:00+06:00">Scheduled</span> <span class="when">Sun 02 Aug · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">It has been calling five times a day for fourteen hundred years. The oldest reminder in the world. Answer it.
 চৌদ্দশো বছর ধরে দিনে পাঁচবার ডেকে চলেছে। পৃথিবীর প্রাচীনতম স্মরণিকা। সাড়া দিন।
 
@@ -1094,7 +1112,7 @@ https://wasilah.site/get/
 <span class="id">v20 · ummah</span>
 <button class="post" onclick="tg(this)">Posted?</button>
 <button class="copy" onclick="cp(this)">Copy caption</button></div>
-<div class="whenrow"><span class="when">Mon 03 Aug · 21:00 BD · 18:00 Gulf</span></div>
+<div class="whenrow"><span class="st" data-due="2026-08-03T21:00:00+06:00">Scheduled</span> <span class="when">Mon 03 Aug · 21:00 BD · 18:00 Gulf</span></div>
 <pre class="cap">Shoulder to shoulder, the differences dissolve. One row, one direction, one Ummah. Prayer built the strongest community on earth.
 কাঁধে কাঁধ মিলিয়ে সব ভেদাভেদ মিলিয়ে যায়। এক কাতার, এক দিক, এক উম্মাহ। সালাতই গড়েছে পৃথিবীর দৃঢ়তম সম্প্রদায়।
 
@@ -1119,7 +1137,27 @@ function tg(btn) {
   const on = card.classList.toggle('done');
   localStorage.setItem('wp-' + id, on ? '1' : '');
   btn.textContent = on ? 'Posted ✓' : 'Posted?';
+  paint();
 }
+function paint() {
+  let g = 0, y = 0, r = 0;
+  const now = new Date();
+  document.querySelectorAll('.card[data-pid]').forEach(c => {
+    const chip = c.querySelector('.st');
+    if (!chip) return;
+    if (localStorage.getItem('wp-' + c.dataset.pid)) {
+      chip.className = 'st green'; chip.textContent = 'Posted'; g++;
+    } else if (chip.dataset.due && new Date(chip.dataset.due) < now) {
+      chip.className = 'st red'; chip.textContent = 'Due - not posted'; r++;
+    } else {
+      chip.className = 'st'; chip.textContent = 'Scheduled'; y++;
+    }
+  });
+  document.getElementById('c-green').textContent = g + ' posted';
+  document.getElementById('c-yellow').textContent = y + ' scheduled';
+  document.getElementById('c-red').textContent = r + ' due';
+}
+setInterval(paint, 60000);
 function jump(id) {
   const c = document.querySelector('[data-pid="' + id + '"]');
   if (c) c.scrollIntoView({behavior: 'smooth', block: 'center'});
@@ -1130,4 +1168,5 @@ document.querySelectorAll('.card[data-pid]').forEach(c => {
     c.querySelector('.post').textContent = 'Posted ✓';
   }
 });
+paint();
 </script></body></html>
