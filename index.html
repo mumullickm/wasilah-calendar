@@ -67,7 +67,8 @@ td a { color:#F1D592; }
 <header><h1>Wasilah · Content Studio</h1>
 <p>60 statics + 20 bilingual reels · 4:5 · 30-day run starts Mon 6 Jul 2026.
 Slots (Dhaka): AM static 07:30 · reel 21:00 · PM static 22:00.
-Copy caption, post in Meta Business Suite, then tap "Posted?" to mark green.</p>
+AUTOPILOT: wasilah-ig-scheduler posts to IG + FB by itself; cards flip green
+automatically as each post goes live. Manual "Posted?" stays as override.</p>
 <div class="counts"><span class="cg" id="c-green">0 posted</span>
 <span class="cy" id="c-yellow">0 scheduled</span>
 <span class="cr" id="c-red">0 due</span></div></header>
@@ -1139,13 +1140,18 @@ function tg(btn) {
   btn.textContent = on ? 'Posted ✓' : 'Posted?';
   paint();
 }
+let AUTO = {};
 function paint() {
   let g = 0, y = 0, r = 0;
   const now = new Date();
   document.querySelectorAll('.card[data-pid]').forEach(c => {
     const chip = c.querySelector('.st');
     if (!chip) return;
-    if (localStorage.getItem('wp-' + c.dataset.pid)) {
+    const pid = c.dataset.pid;
+    if (AUTO[pid]) {
+      chip.className = 'st green'; chip.textContent = 'Posted (auto)';
+      c.classList.add('done'); g++;
+    } else if (localStorage.getItem('wp-' + pid)) {
       chip.className = 'st green'; chip.textContent = 'Posted'; g++;
     } else if (chip.dataset.due && new Date(chip.dataset.due) < now) {
       chip.className = 'st red'; chip.textContent = 'Due - not posted'; r++;
@@ -1157,7 +1163,24 @@ function paint() {
   document.getElementById('c-yellow').textContent = y + ' scheduled';
   document.getElementById('c-red').textContent = r + ' due';
 }
+const RAW = 'https://raw.githubusercontent.com/mumullickm/wasilah-ig-scheduler/main/';
+async function sync() {
+  try {
+    const bust = '?t=' + Math.floor(Date.now() / 60000);
+    const [st, rl] = await Promise.all([
+      fetch(RAW + 'posted_statics.json' + bust).then(r => r.json()),
+      fetch(RAW + 'posted_reels.json' + bust).then(r => r.json())]);
+    AUTO = {};
+    for (const [k, v] of Object.entries(st))
+      if (v.ig || v.fb) AUTO[k] = true;
+    for (const [k, v] of Object.entries(rl))
+      if (v.ig || v.fb) AUTO[k.split('-')[0]] = true;
+  } catch (e) { /* offline or repo unreachable - keep manual state */ }
+  paint();
+}
+setInterval(sync, 300000);
 setInterval(paint, 60000);
+sync();
 function jump(id) {
   const c = document.querySelector('[data-pid="' + id + '"]');
   if (c) c.scrollIntoView({behavior: 'smooth', block: 'center'});
